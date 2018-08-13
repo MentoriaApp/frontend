@@ -15,7 +15,7 @@ Este projeto deve utilizar React.js e Redux. A estrutura de diretórios deverá 
  - Deve ser possivel cadastrar minha localização e 
      - As skills que estou disposto a ensinar
      - Ou as skills que eu quero aprender
- - Deve ser poss[ivel procurar pessoas que
+ - Deve ser possível procurar pessoas que
      - Querem ensinar determinadas skills
      - Queiram aprender detarminadas skills
  
