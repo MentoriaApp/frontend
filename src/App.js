@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Mentor from './Mentor';
 import './App.css';
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        { this.state.mentorList.map(mentor => <h1 key={mentor.description.name}>{mentor.description.name}</h1>) }  
+        { this.state.mentorList.map(mentor => <Mentor key={mentor.description.name} mentor={mentor} />) }  
       </div>
     );
   }
