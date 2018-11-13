@@ -11,7 +11,7 @@ const Mentor = (props) => {
             </div>
             <div>
                 <h2>{mentor.description.name}</h2>
-                <small><a href={mentor.description.url}>{mentor.description.url}</a></small>
+                <SocialLink url={mentor.description.url} />
                 <h5>Oferece Mentoria dos seguinntes Assuntos:</h5>
                 <ul className="mentory-type-list">
                     { mentor.mentoryType.map(type => <li key={type}><span>{ type }</span></li>) }
