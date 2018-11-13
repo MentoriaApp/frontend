@@ -12,10 +12,11 @@ const Mentor = (props) => {
             <div>
                 <h2>{mentor.description.name}</h2>
                 <small><a href={mentor.description.url}>{mentor.description.url}</a></small>
+                <h5>Oferece Mentoria dos seguinntes Assuntos:</h5>
                 <ul className="mentory-type-list">
                     { mentor.mentoryType.map(type => <li key={type}><span>{ type }</span></li>) }
                 </ul>
-
+                <h5>Contatos disponíveis</h5>
                 { mentor.isActive ? Object.keys(mentor.contact).map( key => <SocialLink key={key} url={mentor.contact[key]} />) : <label className="inactive-mentor" >Mentor Inativo</label> }
             </div>
         </div>

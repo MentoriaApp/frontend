@@ -22,7 +22,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        { this.state.mentorList.map(mentor => <Mentor key={mentor.description.name} mentor={mentor} />) }  
+        <div className="search">
+          <label>Busco mentoria nos seguinte assunto:</label>
+          <div className="mentor-search" >
+            <input placeholder="" />
+          </div>
+        </div>
+        <div className="mentor-list">
+          { this.state.mentorList.map(mentor => <Mentor key={mentor.description.name} mentor={mentor} />) }  
+        </div>
       </div>
     );
   }
