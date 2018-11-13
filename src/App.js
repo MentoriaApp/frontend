@@ -6,7 +6,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      mentorList: []
+      mentorList: [],
+      term: ''
     }
   }
   
@@ -19,17 +20,27 @@ class App extends Component {
       .then(json => this.setState({ mentorList: json }))      
   }
 
+  mentorList() {
+    if (this.state.term.trim() === '') {
+      return this.state.mentorList
+    } else {
+      return this.state.mentorList
+        .filter(mentor => mentor.mentoryType
+          .find(type => type.toLowerCase().indexOf(this.state.term.toLowerCase()) > -1))
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <div className="search">
           <label>Busco mentoria no seguinte assunto:</label>
           <div className="mentor-search" >
-            <input placeholder="" />
+            <input placeholder="Ex.: UX" value={this.state.term} onChange={evt => this.setState({ term: evt.target.value })} />
           </div>
         </div>
         <div className="mentor-list">
-          { this.state.mentorList.map(mentor => <Mentor key={mentor.description.name} mentor={mentor} />) }  
+          { this.mentorList().map(mentor => <Mentor key={mentor.description.name} mentor={mentor} />) }  
         </div>
       </div>
     );
