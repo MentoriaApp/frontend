@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="search">
-          <label>Busco mentoria nos seguinte assunto:</label>
+          <label>Busco mentoria no seguinte assunto:</label>
           <div className="mentor-search" >
             <input placeholder="" />
           </div>
