@@ -10,7 +10,6 @@ class App extends Component {
   }
   
   componentDidMount() {
-    //let response = ''
     fetch('https://tc-mentor-fetch.herokuapp.com/api/mentor/list', {
       method: 'GET',
       "Content-Type": 'application/json'
