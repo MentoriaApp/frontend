@@ -13,7 +13,7 @@ class App extends Component {
   }
   
   componentDidMount() {
-    fetch('https://tc-mentor-fetch.herokuapp.com/api/mentor/list', {
+    fetch(`${process.env.REACT_APP_API_URL}/mentor/list`, {
       method: 'GET',
       "Content-Type": 'application/json'
     })
