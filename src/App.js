@@ -26,6 +26,7 @@ class App extends Component {
       return this.state.mentorList
     } else {
       return this.state.mentorList
+        .filter(mentor => mentor.isActive)
         .filter(mentor => mentor.mentoryType
           .find(type => type.toLowerCase().indexOf(this.state.term.toLowerCase()) > -1))
     }
