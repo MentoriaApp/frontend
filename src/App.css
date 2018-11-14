@@ -45,7 +45,6 @@ textarea:focus, input:focus{
 
 .mentor-list {
   display: flex;
-  flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: stretch;
@@ -61,8 +60,9 @@ textarea:focus, input:focus{
   text-align: center;
   align-self: flex-start;
   margin-bottom: 10px;
-  height: 355px;
+  min-height: 355px;
   transition: width 0.4s ease-out;
+  box-shadow: 2px 2px 10px gray;
 }
 
 @media screen and (max-width: 930px) {
@@ -131,20 +131,17 @@ h2 {
   display: flex;
   max-width: 420px;
   flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
 }
 
 .mentory-type-list > li {
-  display: flex;
   color: white;
   background: #0075da;
   border-radius: 25px;
-  padding-left: 15px;
-  padding-right: 15px;
   padding-bottom: 5px;
   padding-top: 5px;
   margin: 1px;
-  font-size: 11px;
+  font-size: 13px;
   font-family: 'Cousine', monospace;
 }
 
