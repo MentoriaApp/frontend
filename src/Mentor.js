@@ -9,10 +9,10 @@ const Mentor = (props) => {
             <div className="picture-container">
                 <ProfilePicture mentor={mentor} />        
             </div>
-            <div>
+            <div className="mentor-info">
                 <h2>{mentor.description.name}</h2>
                 <SocialLink url={mentor.description.url} />
-                <h5>Oferece Mentoria dos seguinntes Assuntos:</h5>
+                <h5>Oferece Mentoria dos seguintes Assuntos:</h5>
                 <ul className="mentory-type-list">
                     { mentor.mentoryType.map(type => <li key={type}><span>{ type }</span></li>) }
                 </ul>
