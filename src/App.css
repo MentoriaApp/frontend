@@ -62,23 +62,39 @@ textarea:focus, input:focus{
   align-self: flex-start;
   margin-bottom: 10px;
   height: 355px;
+  transition: width 0.4s ease-out;
 }
 
 @media screen and (max-width: 930px) {
   .mentor-card {
-    width: 95vw;  
+    width: 95vw;
+    transition: width 0.4s ease-out
   }
 }
 
 @media screen and (min-width: 930px) {
   .mentor-card {
     width: 45vw;  
+    transition: width 0.4s ease-out
   }
 }
 
 @media screen and (min-width: 1630px) {
   .mentor-card {
     width: 30vw;  
+    transition: width 0.4s ease-out
+  }
+}
+
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: 1em;
+    transition: font-size 1s ease-out
+  }
+
+  h2 {
+    font-size: 1.2em;
+    transition: font-size 1s ease-out
   }
 }
 
@@ -134,6 +150,11 @@ h2 {
 
 .social-icon {
   margin: 2px
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s linear
 }
 
 .inactive-mentor {
