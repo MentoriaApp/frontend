@@ -57,30 +57,53 @@ textarea:focus, input:focus{
   border-width: 1px;
   border-radius: 10px;
   border-color: darkgrey;
-  display: inline-grid;
+  display: flex;
   text-align: center;
   align-self: flex-start;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  height: 355px;
+}
+
+@media screen and (max-width: 930px) {
+  .mentor-card {
+    width: 95vw;  
+  }
+}
+
+@media screen and (min-width: 930px) {
+  .mentor-card {
+    width: 45vw;  
+  }
+}
+
+@media screen and (min-width: 1630px) {
+  .mentor-card {
+    width: 30vw;  
+  }
 }
 
 .picture-container {
   margin: 5px;
-  background: #cfd7de59;
+  background: #cfd7de24;
   border-radius: 10px;
-  min-width: 300px;
-  min-height: 300px;
+  width: 150px;
+  height: 150px;
   text-align: center;
 }
 
 .mentor-avatar {
-  border-radius: 50%;
-  max-width: 300px;
-  max-height: 300px;
+  border-radius: 5px;
+  max-width: 150px;
+  max-height: 150px;
   width: fit-content;
 }
 
+.mentor-info {
+  width: 70%;
+}
+
 .no-avatar {
-  margin-top: 50%;
+  margin-top: 40%;
 }
 
 h2 {
