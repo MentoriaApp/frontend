@@ -1,4 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import styled from 'react-emotion'
+
+const MentorAvatar = styled('img')`
+    border-radius: 5px;
+    max-width: 150px;
+    max-height: 150px;
+    width: fit-content;
+`
+
+const NoAvatar = styled('div')`
+    margin-top: 40%;
+`
 
 class ProfilePicture extends Component {
     constructor() {
@@ -23,8 +35,8 @@ class ProfilePicture extends Component {
             <div >
             {  
                 this.state.loading ? <div> Carregando Imagem... </div> : 
-                this.state.hasPicture ? <img className="mentor-avatar" src={this.state.url} alt={this.props.mentor.description.name}></img>
-                : <div className="no-avatar"> No Image </div>
+                this.state.hasPicture ? <MentorAvatar src={this.state.url} alt={this.props.mentor.description.name} />
+                : <NoAvatar> No Image </NoAvatar>
             }
             </div>
         )
