@@ -9,8 +9,8 @@ const Wrapper = styled('div')`
 `
 
 const TopBar = styled('header')`
-  background: #2B7DBD;
-  color: #FFF;
+  background: #2b7dbd;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -30,7 +30,8 @@ const SearchSection = styled('section')`
   flex-direction: column;
   align-content: center;
 
-  h2, h3 {
+  h2,
+  h3 {
     text-align: center;
   }
 `
@@ -64,17 +65,17 @@ class App extends Component {
     super()
     this.state = {
       mentorList: [],
-      term: ''
+      term: '',
     }
   }
-  
+
   componentDidMount() {
     fetch(`https://tc-mentor-fetch.herokuapp.com/api/mentor/list`, {
       method: 'GET',
-      "Content-Type": 'application/json'
+      'Content-Type': 'application/json',
     })
       .then(response => response.json())
-      .then(json => this.setState({ mentorList: json }))      
+      .then(json => this.setState({ mentorList: json }))
   }
 
   mentorList() {
@@ -83,8 +84,12 @@ class App extends Component {
     } else {
       return this.state.mentorList
         .filter(mentor => mentor.isActive)
-        .filter(mentor => mentor.mentoryType
-          .find(type => type.toLowerCase().indexOf(this.state.term.toLowerCase()) > -1))
+        .filter(mentor =>
+          mentor.mentoryType.find(
+            type =>
+              type.toLowerCase().indexOf(this.state.term.toLowerCase()) > -1
+          )
+        )
     }
   }
 
@@ -92,20 +97,28 @@ class App extends Component {
     return (
       <Wrapper>
         <TopBar>
-          <img src={logo} alt="Training Center Logo"/>
+          <img src={logo} alt="Training Center Logo" />
           <h1>Training Center - Encontre seu mentor</h1>
         </TopBar>
 
         <SearchSection>
           <h2>Busco mentoria para o seguinte assunto:</h2>
           <SearchArea>
-            <input placeholder="Ex.: UX" value={this.state.term} onChange={evt => this.setState({ term: evt.target.value })} />
+            <input
+              placeholder="Ex.: UX"
+              value={this.state.term}
+              onChange={evt => this.setState({ term: evt.target.value })}
+            />
           </SearchArea>
         </SearchSection>
 
-        <center><h3>Mentores encontrados</h3></center>
+        <center>
+          <h3>Mentores encontrados</h3>
+        </center>
         <MentorList>
-          { this.mentorList().map(mentor => <Mentor key={mentor.description.name} mentor={mentor} />) }  
+          {this.mentorList().map(mentor => (
+            <Mentor key={mentor.description.name} mentor={mentor} />
+          ))}
         </MentorList>
       </Wrapper>
     )
