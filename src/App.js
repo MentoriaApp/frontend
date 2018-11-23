@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Mentor from './components/Mentor'
 import styled from 'react-emotion'
+import Loading from './components/Loading'
 
 import logo from './images/tc-logo.svg'
 
@@ -66,6 +67,7 @@ class App extends Component {
     this.state = {
       mentorList: [],
       term: '',
+      loading: true,
     }
   }
 
@@ -75,7 +77,7 @@ class App extends Component {
       'Content-Type': 'application/json',
     })
       .then(response => response.json())
-      .then(json => this.setState({ mentorList: json }))
+      .then(json => this.setState({ mentorList: json, loading: false }))
   }
 
   mentorList() {
@@ -91,6 +93,14 @@ class App extends Component {
           )
         )
     }
+  }
+
+  renderResults() {
+    if (this.state.loading) return <Loading />
+
+    return this.mentorList().map(mentor => (
+      <Mentor key={mentor.description.name} mentor={mentor} />
+    ))
   }
 
   render() {
@@ -115,11 +125,7 @@ class App extends Component {
         <center>
           <h3>Mentores encontrados</h3>
         </center>
-        <MentorList>
-          {this.mentorList().map(mentor => (
-            <Mentor key={mentor.description.name} mentor={mentor} />
-          ))}
-        </MentorList>
+        <MentorList>{this.renderResults()}</MentorList>
       </Wrapper>
     )
   }

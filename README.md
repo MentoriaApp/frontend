@@ -19,6 +19,7 @@ Você pode acessar a App **[aqui](http://tc-mentor-search.herokuapp.com/).**
 - **[React Social Icons](https://github.com/jaketrent/react-social-icons)**
 - **[Prettier](https://prettier.io/)**
 - **[Husky](https://github.com/typicode/husky)**
+- **[React Loading](https://github.com/fakiolinho/react-loading)**
 
 ## Iniciando a aplicação localmente
 
