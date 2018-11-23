@@ -15,7 +15,7 @@ class ProfilePicture extends Component {
   constructor() {
     super()
     this.state = {
-      isLoading: true,
+      loading: true,
     }
   }
   componentDidMount() {
@@ -27,7 +27,7 @@ class ProfilePicture extends Component {
         }`
       )
         .then(response => response.json())
-        .then(url => this.setState({ isLoading: false, hasPicture: true, url }))
+        .then(url => this.setState({ loading: false, hasPicture: true, url }))
         .catch(() => this.setState({ loading: false, hasPicture: false }))
     } else {
       this.setState({ loading: false, hasPicture: false })
