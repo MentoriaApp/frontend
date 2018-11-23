@@ -1,44 +1,76 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# App Mentoria
 
-## Available Scripts
+App desenvolvida para você encontrar facilmente um mentor do **[Training Center](https://github.com/training-center/mentoria)** que vá de acordo com suas necessidades.
 
-In the project directory, you can run:
+Você pode acessar a App **[aqui](http://tc-mentor-search.herokuapp.com/).**
 
-### `npm start`
+## Projetos relacionados
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Se você nunca ouviu falar do **Training Center**, dê uma olhada na **[página do projeto](https://trainingcenter.io)**
+- Esse repositório contém o código do Front-end da App e você pode encontrar o código do Back-end da App **[aqui](https://github.com/MentoriaApp/backend)**
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Tecnologias utilizadas
 
-### `npm test`
+- **[Yarn](https://yarnpkg.com/pt-BR/)**
+- **[Docker](https://www.docker.com/)**
+- **[Create React App](https://github.com/facebook/create-react-app)**
+- **[React](https://reactjs.org/)**
+- **[React Emotion](https://github.com/emotion-js/emotion)**
+- **[Prettier](https://prettier.io/)**
+- **[Husky](https://github.com/typicode/husky)**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Iniciando a aplicação localmente
 
-### `npm run build`
+- Clone o repo, entre no diretório e instale as dependências:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone git@github.com:MentoriaApp/frontend.git && cd frontend && yarn
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- Inicie a aplicação em modo de desenvolvimento, que ficará disponível em [http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn start
+```
 
-### `npm run eject`
+## Scripts disponíveis
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Para iniciar a aplicação em modo de desenvolvimento:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Para iniciar os testes:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+yarn test
+```
 
-## Learn More
+- Para fazer a build de produção da app que será gerada no diretório `build`:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+yarn build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Para formatar os arquivos utilizando o **Prettier**:
+
+```
+yarn format
+```
+
+- Para fazer o `eject` (**[leia mais aqui](https://facebook.github.io/create-react-app/docs/available-scripts#npm-run-eject)**):
+
+```
+yarn eject
+```
+
+## Git Hooks
+
+O projeto já vem configurado com um hook `pre-commit` para formatar todos os arquivos que foram modificados utilizando o **Prettier** para que você não precise de fazer isso manualmente.
+
+## Contribuindo para o projeto
+
+Se você quer contribuir, **[verifique ou crie uma issue](https://github.com/MentoriaApp/frontend/issues)** e envie um **Pull Request**.
+
+Não se esqueça de ler o nosso **[Código de Conduta](./CODE_OF_CONDUCT.md)**
