@@ -16,6 +16,7 @@ Você pode acessar a App **[aqui](http://tc-mentor-search.herokuapp.com/).**
 - **[Create React App](https://github.com/facebook/create-react-app)**
 - **[React](https://reactjs.org/)**
 - **[React Emotion](https://github.com/emotion-js/emotion)**
+- **[React Social Icons](https://github.com/jaketrent/react-social-icons)**
 - **[Prettier](https://prettier.io/)**
 - **[Husky](https://github.com/typicode/husky)**
 
