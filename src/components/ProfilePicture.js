@@ -8,9 +8,8 @@ const MentorAvatar = styled('img')`
   width: fit-content;
 `
 
-const NoAvatar = styled('div')`
-  margin-top: 40%;
-`
+const getUIAvatar = name =>
+  `https://ui-avatars.com/api/?name=${name}&background=2b7dbd&color=fff&size=150`
 
 class ProfilePicture extends Component {
   constructor() {
@@ -39,13 +38,15 @@ class ProfilePicture extends Component {
       <div>
         {this.state.loading ? (
           <div> Carregando Imagem... </div>
-        ) : this.state.hasPicture ? (
+        ) : (
           <MentorAvatar
-            src={this.state.url}
+            src={
+              this.state.hasPicture
+                ? this.state.url
+                : getUIAvatar(this.props.mentor.description.name)
+            }
             alt={this.props.mentor.description.name}
           />
-        ) : (
-          <NoAvatar> No Image </NoAvatar>
         )}
       </div>
     )
