@@ -102,9 +102,13 @@ const Mentor = props => {
         </MentoryTypeList>
         <h5>Contatos disponíveis</h5>
         {mentor.isActive ? (
-          Object.keys(mentor.contact).map(key => (
-            <SocialLink key={key} url={mentor.contact[key]} />
-          ))
+          mentor.contact ? (
+            Object.keys(mentor.contact).map(key => (
+              <SocialLink key={key} url={mentor.contact[key]} />
+            ))
+          ) : (
+            <h5>Nenhum contato informado</h5>
+          )
         ) : (
           <InactiveMentor>Mentor Inativo</InactiveMentor>
         )}
