@@ -1,0 +1,15 @@
+.header {
+  background: #2b7dbd;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 930px) {
+  .header img {
+    width: 50px;
+    margin: 5px;
+    transition: width 1s ease-out;
+  }
+}
