@@ -1,0 +1,30 @@
+/** Main div of search Section **/
+.searchSection {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.searchSection h2,
+h3 {
+  text-align: center;
+}
+
+/** Search area **/
+.searchArea {
+  border: solid;
+  border-width: 1px;
+  height: 50px;
+  padding: 5px;
+  border-color: darkgray;
+  border-radius: 5px;
+}
+
+.searchArea input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: x-large;
+  font-family: 'Open Sans', sans-serif;
+}
