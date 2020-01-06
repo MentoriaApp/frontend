@@ -27,4 +27,6 @@ h3 {
   border: none;
   font-size: x-large;
   font-family: 'Open Sans', sans-serif;
+  background: none;
+  outline: none;
 }

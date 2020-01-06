@@ -6,10 +6,9 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 
 injectGlobal`
-    @font-face {
-        font-family: 'Ubuntu';
-        src: url('https://fonts.googleapis.com/css?family=Ubuntu?Open+Sans|Cousine');
-    }
+
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans|Montserrat:300,400,500,600&display=swap');  
+ 
 
     body {
         margin: 0;
@@ -20,7 +19,7 @@ injectGlobal`
     }
 
     h2, h3 {
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-weight: normal;
     }
 

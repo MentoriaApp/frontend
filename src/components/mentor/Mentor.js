@@ -38,20 +38,33 @@ const Mentor = props => {
     /*Mentor content*/
     <div className={styles.mentorCard}>
       {/*Profile picture*/}
-      <div className={styles.pictureWrapper}>
-        <ProfilePicture mentor={mentor} />
+      <div className={styles.mentorIntroduction}>
+        <div className={styles.pictureWrapper}>
+          <ProfilePicture mentor={mentor} />
+        </div>
+        <div className={styles.mentorNameAndLink}>
+          <h2>{mentor.description.name}</h2>
+        </div>
+        <div className={styles.mentorClipPath} />
       </div>
+
       {/*Mentor wrapper*/}
+      <ul className={styles.mentoryTypeList}>{listMentoryType}</ul>
       <div className={styles.mentorInfo}>
         {/*Mentor name*/}
-        <h2>{mentor.description.name}</h2>
+
         {/*Mentor's principal social link*/}
-        <SocialLink url={mentor.description.url} />
+
         {/*List of available types of mentory that the mentor can handle*/}
-        <ul className={styles.mentoryTypeList}>{listMentoryType}</ul>
+
         {/*Contact data from mentor*/}
-        <h5>Contatos disponíveis</h5>
         {mentorBottomWrapper}
+      </div>
+      <div>
+        <button className={styles.mentorButton}>
+          <span>Perfil</span>
+          <SocialLink url={mentor.description.url} />
+        </button>
       </div>
     </div>
   )
