@@ -133,11 +133,12 @@
 }
 
 .mentorButton {
-  border: none;
-  background: #3575da;
-  color: white;
+  border-width: 1px;
+  background: white;
+  border-color: #3575da;
+  color: #3575da;
   max-width: 150px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
